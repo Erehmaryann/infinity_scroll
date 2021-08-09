@@ -11,3 +11,7 @@ body {
   font-family: Bebas Neue, Helvetica, sans-serif;
   background-color: whitesmoke;
 }
+
+h1 {
+  text-align: center;
+}
