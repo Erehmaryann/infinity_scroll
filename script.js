@@ -19,6 +19,9 @@ function displayPhotos() {
     link.target = "_blank";
     // Create an image tag to hold the image
     const image = document.createElement("img");
+    image.src = photo.urls.regular;
+    image.setAttribute("alt", photo.alt_description);
+    image.title = photo.alt_description;
   });
 }
 // Get random photo from Unsplash API
