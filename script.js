@@ -1,3 +1,9 @@
+// Global Variables
+const imageContainer = document.getElementById("image-container");
+const loader = document.getElementById("loader");
+
+let photosArray = [];
+
 //Unsplash API
 const count = 10;
 const apiKey = "RYnkyRnjFT192RS26aNbAiAl8xDkz6G6DaRoDcIVl_c";
