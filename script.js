@@ -22,6 +22,9 @@ function displayPhotos() {
     image.src = photo.urls.regular;
     image.setAttribute("alt", photo.alt_description);
     image.title = photo.alt_description;
+    // Put image into link, and then put both into the imageContainer
+    link.appendChild(image);
+    imageContainer.appendChild(link);
   });
 }
 // Get random photo from Unsplash API
