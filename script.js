@@ -9,12 +9,24 @@ const count = 10;
 const apiKey = "RYnkyRnjFT192RS26aNbAiAl8xDkz6G6DaRoDcIVl_c";
 const apiUrl = `https://api.unsplash.com/photos/random/?client_id=${apiKey}&count=${count}`;
 
+// Create Elements for links and photos, Add to DOM
+function displayPhotos() {
+  // Run function for each obj in photosArray
+  photosArray.forEach((photo) => {
+    // Create a link to unsplash
+    const link = document.createElement("a");
+    link.setAttribute("href", photo.links.html);
+    link.target = "_blank";
+    // Create an image tag to hold the image
+    const image = document.createElement("img");
+  });
+}
 // Get random photo from Unsplash API
 async function getRandomPhoto() {
   try {
     const response = await fetch(apiUrl);
     photosArray = await response.json();
-    console.log(photosArray);
+    displayPhotos();
   } catch (e) {
     //catch error
   }
