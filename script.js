@@ -1,5 +1,5 @@
 // Global Variables
-const imageContainer = document.getElementById("image-container");
+const imageContainer = document.getElementById("imageContainer");
 const loader = document.getElementById("loader");
 
 let photosArray = [];
