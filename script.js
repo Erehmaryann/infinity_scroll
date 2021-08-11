@@ -29,6 +29,8 @@ function setAttributes(element, attributes) {
 
 // Create Elements for links and photos, Add to DOM
 function displayPhotos() {
+  // set totalImages to the length of the array
+  totalImages = photosArray.length;
   // Run function for each obj in photosArray
   photosArray.forEach((photo) => {
     // Create a link to unsplash
@@ -73,8 +75,8 @@ getRandomPhoto();
 // Check to see if scrolling is near the bottom of the page, if so, load more photos
 window.addEventListener("scroll", () => {
   if (
-    window.scrollY + window.innerHeight >=
-    document.body.offsetHeight - 1000
+    window.scrollY + window.innerHeight >= document.body.offsetHeight - 1000 &&
+    ready
   ) {
     getRandomPhoto();
   }
