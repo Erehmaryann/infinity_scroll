@@ -29,6 +29,7 @@ function setAttributes(element, attributes) {
 
 // Create Elements for links and photos, Add to DOM
 function displayPhotos() {
+  loadedImages = 0;
   // set totalImages to the length of the array
   totalImages = photosArray.length;
   // Run function for each obj in photosArray
@@ -78,6 +79,7 @@ window.addEventListener("scroll", () => {
     window.scrollY + window.innerHeight >= document.body.offsetHeight - 1000 &&
     ready
   ) {
+    ready = false;
     getRandomPhoto();
   }
 });
