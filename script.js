@@ -57,9 +57,12 @@ async function getRandomPhoto() {
 // On load
 getRandomPhoto();
 
-// Check to see if scrolling is at the bottom of the page, if so, load more photos
+// Check to see if scrolling is near the bottom of the page, if so, load more photos
 window.addEventListener("scroll", () => {
-  if (window.scrollY + window.innerHeight + 100 >= document.body.scrollHeight) {
+  if (
+    window.scrollY + window.innerHeight >=
+    document.body.offsetHeight - 1000
+  ) {
     getRandomPhoto();
   }
 });
