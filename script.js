@@ -2,6 +2,9 @@
 const imageContainer = document.getElementById("imageContainer");
 const loader = document.getElementById("loader");
 
+let ready = false;
+let loadedImages = 0;
+let totalImages = 0;
 let photosArray = [];
 
 //Unsplash API
